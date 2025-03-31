@@ -1,0 +1,285 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 5rem; /* Aumentado para dejar espacio al menú fijo */
+  text-align: center;
+}
+
+/* Estilos para el contenedor de la aplicación */
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Estilos para el header */
+.app-container header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-container header {
+    background-color: #242424;
+  }
+}
+
+/* Estilos para el menú de navegación */
+.main-nav {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(100, 108, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nav-menu li {
+  flex: 1;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(100, 108, 255, 0.2);
+  color: #535bf2;
+}
+
+.nav-menu a.active {
+  background-color: #646cff;
+  color: white;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Estilos compartidos para componentes de tabla */
+.todo-list-container, .user-list-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.todo-form, .user-form {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.todo-form input, .user-form input {
+  flex: 1;
+  padding: 0.6em 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.todo-filter, .user-filter {
+  margin-bottom: 1rem;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 0.6em 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* Estilos para la tabla */
+.todo-table-container, .user-table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.todo-table, .user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(100, 108, 255, 0.2);
+}
+
+.todo-table th,
+.todo-table td,
+.user-table th,
+.user-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(100, 108, 255, 0.2);
+  text-align: left;
+}
+
+.todo-table th,
+.user-table th {
+  background-color: rgba(100, 108, 255, 0.1);
+  font-weight: bold;
+}
+
+.todo-table th.sortable,
+.user-table th.sortable {
+  cursor: pointer;
+}
+
+.todo-table th.sortable:hover,
+.user-table th.sortable:hover {
+  background-color: rgba(100, 108, 255, 0.2);
+}
+
+.todo-table tbody tr:hover,
+.user-table tbody tr:hover {
+  background-color: rgba(100, 108, 255, 0.05);
+}
+
+.todo-table .completed-row td {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: line-through;
+}
+
+.user-table .selected-user td {
+  background-color: rgba(100, 108, 255, 0.1);
+}
+
+@media (prefers-color-scheme: light) {
+  .todo-table .completed-row td {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.checkbox-cell {
+  width: 40px;
+  text-align: center;
+}
+
+.actions-cell {
+  width: 160px;
+  text-align: right;
+}
+
+.actions-cell button {
+  margin-left: 0.5rem;
+  padding: 0.4em 0.8em;
+  font-size: 0.875em;
+}
+
+.btn-edit {
+  background-color: rgba(100, 108, 255, 0.1);
+  color: #646cff;
+}
+
+.btn-delete {
+  background-color: rgba(255, 100, 100, 0.1);
+  color: #ff6464;
+}
+
+.edit-form-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit-form-inline input {
+  flex: 1;
+  padding: 0.4em 0.6em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.875em;
+}
+
+.edit-actions-inline {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.edit-actions-inline button {
+  padding: 0.3em 0.6em;
+  font-size: 0.875em;
+}
+
+.btn-save {
+  background-color: rgba(100, 255, 100, 0.1);
+  color: #64ff64;
+}
+
+.btn-cancel {
+  background-color: rgba(255, 100, 100, 0.1);
+  color: #ff6464;
+}
+
+.error-message {
+  color: #ff6464;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background-color: rgba(255, 100, 100, 0.1);
+  border-radius: 8px;
+}
+
+.loading {
+  margin: 1rem 0;
+  color: #646cff;
+}
+
+.empty-message {
+  margin: 2rem 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (prefers-color-scheme: light) {
+  .empty-message {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
